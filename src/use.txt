@@ -1,0 +1,495 @@
+import './Slider.css'
+import CardCarousel from './CardCarousel'
+import CardCarouselData from './CardCarouselData'
+import { useState } from 'react'
+
+export default function Slider() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? CardCarouselData.length - 1 : prevIndex - 1))
+  }
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === CardCarouselData.length - 1 ? 0 : prevIndex + 1))
+  }
+
+  return (
+    <div className='slider'>
+      <div className='s-w-1'>
+        <p className='s-p-1'>RESOURCES</p>
+        <h1 className='s-h-1'>Discover exclusive resources to supercharge growth</h1>
+      </div>
+      <div className='s-bn-1'>
+        <button className='s-bt-1' onClick={handlePrevClick}>
+          <div className='s-bt-1-t'>
+            READ
+            <span>
+              <svg width="18" height="14" fill="none" className="dir-arrow">
+                <path
+                  d="M17 7H1M11 13l6-6-6-6"
+                  stroke="#170426"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button className='s-bt-2' onClick={handleNextClick}>
+          <div className='s-bt-2-t'>
+            LISTEN
+            <span>
+              <svg width="18" height="14" fill="none" className="dir-arrow">
+                <path
+                  d="M17 7H1M11 13l6-6-6-6"
+                  stroke="#170426"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button className='s-bt-3' onClick={handleNextClick}>
+          <div className='s-bt-3-t'>
+            LISTEN
+            <span>
+              <svg width="18" height="14" fill="none" className="dir-arrow">
+                <path
+                  d="M17 7H1M11 13l6-6-6-6"
+                  stroke="#170426"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button className='s-n-1'>
+          <span>
+            <svg width="39" height="39" fill="none" className="left-arrow">
+              <path
+                clipRule="evenodd"
+                d="M19.477 37.582v0c9.942 0 18-8.058 18-18v0c0-9.942-8.058-18-18-18v0c-9.942 0-18 8.058-18 18v0c0 9.942 8.058 18 18 18z"
+                stroke="#170426"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16.77 12.875a1 1 0 011.414 1.414l-4.293 4.293h13.586a1 1 0 010 2H13.89l4.293 4.293a1 1 0 01-1.415 1.414l-6-6a.995.995 0 01-.217-1.09.996.996 0 01.218-.325m6-6l-6 6 6-6z"
+                fill="#170426"
+              />
+            </svg>
+          </span>
+          <p className='s-n-p-1'>{currentIndex + 1}/3</p>
+          <span>
+            <svg width="39" height="39" fill="none" className="right-arrow">
+              <path
+                clipRule="evenodd"
+                d="M19.863 37.582v0c-9.942 0-18-8.058-18-18v0c0-9.942 8.058-18 18-18v0c9.942 0 18 8.058 18 18v0c0 9.942-8.058 18-18 18z"
+                stroke="#170426"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M22.57 12.875a1 1 0 00-1.414 1.414l4.293 4.293H11.863a1 1 0 100 2H25.45l-4.293 4.293a1 1 0 101.414 1.414l6-6a.995.995 0 00.217-1.09.998.998 0 00-.21-.318l-.007-.007m-6-6l6 6-6-6z"
+                fill="#170426"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div className='s-s-1'>
+        <div className='s-s-1-t'>
+          <p className='s-s-p-1'>
+            <span className='s-s-p-1-b'>The Bugle</span>
+            - tips to help MSPs start, scale, and grow.
+          </p>
+          <a className='s-s-a-1'>view all </a>
+        </div>
+        <div className='s-s-1-s'>
+          {CardCarouselData.map((item, itemIndex) => (
+            <CardCarousel
+              key={itemIndex}
+              imageUrl={item.imageUrl}
+              content={item.content}
+              isActive={itemIndex === currentIndex}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+slider.jsx
+
+import './CardCarousel.css'
+const CardCarousel = ({imageUrl , content}) => {
+  return (
+    <div className="card">
+      <img className="card-img-top" src="https://media.graphassets.com/resize=width:516/output=format:webp/FKDeZijHTq26MTLszVeL" alt="" />
+      <div className="card-body">
+        <p className="card-text">SuperOps partners with Pax8 to become the first PSA-RMM platform on the marketplace</p>
+        <p className="rm-1">
+          read more
+        </p>
+      </div>
+    </div>
+  );
+}; 
+
+export default CardCarousel
+
+this is CardCarousel.jsx
+
+const CardCarouselData = [
+        {
+            imageUrl:"https://media.graphassets.com/resize=width:516/output=format:webp/FKDeZijHTq26MTLszVeL",
+            content:"SuperOps partners with Pax8 to become the first PSA-RMM platform on the marketplace",
+        },
+        {
+            imageUrl:"https://media.graphassets.com/resize=width:516/output=format:webp/FKDeZijHTq26MTLszVeL",
+            content:"SuperOps partners with Pax8 to become the first PSA-RMM platform on the marketplace",
+        },
+        {
+            imageUrl:"https://media.graphassets.com/resize=width:516/output=format:webp/FKDeZijHTq26MTLszVeL",
+            content:"SuperOps partners with Pax8 to become the first PSA-RMM platform on the marketplace",
+        },
+        {
+            imageUrl:"https://media.graphassets.com/resize=width:516/output=format:webp/FKDeZijHTq26MTLszVeL",
+            content:"SuperOps partners with Pax8 to become the first PSA-RMM platform on the marketplace",
+        }
+];
+export default CardCarouselData;
+
+this is CardCarouselData.jsx
+
+
+.slider{
+    padding: 100px 50px;
+    overflow: hidden;
+}
+.s-w-1{
+    width: 490px;
+}
+.s-p-1{
+    letter-spacing: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #f05 !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-family: Poppins, sans-serif;
+}
+.s-h-1{
+    font-size: 48px;
+    line-height: 56px;
+    font-family: Roboto Slab, serif !important;
+    font-weight: 700 !important;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+.s-bn-1{
+    display: flex;
+    gap: 20px;
+    padding-top:30px;
+    padding-bottom: 60px;
+}
+.s-bt-1{
+    background: linear-gradient(90deg, rgb(254, 125, 125) 0%, rgb(255, 195, 195) 103.13%);
+    min-width: 176px;
+    padding: 16px 16px 16px 24px;
+    border: none;
+    border-radius: 69px;
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7) !important;
+    height: 46px;
+}
+.s-bt-1-t{
+    font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 2px;
+        line-height: 12px;
+        text-decoration: none;
+        font-weight: 700 !important;
+        align-items: center !important;
+        display: flex;
+        gap: 54px;
+}
+.s-bt-2{
+    background: linear-gradient(90deg, rgb(214, 127, 191) 0%, rgb(255, 209, 243) 103.13%);    padding: 16px 16px 16px 24px;
+    min-width: 176px;
+    padding: 16px 16px 16px 24px;
+    border: none;
+    border-radius: 69px;
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7) !important;
+    height: 46px;
+}
+.s-bt-2-t{
+    font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 2px;
+        line-height: 12px;
+        text-decoration: none;
+        font-weight: 700 !important;
+        align-items: center !important;
+        display: flex;
+        gap: 54px;
+}
+.s-bt-3{
+    background: linear-gradient(90deg, rgb(142, 151, 225) 0%, rgb(212, 217, 255) 103.13%);    border: none;
+    min-width: 176px;
+    padding: 16px 16px 16px 24px;
+    border: none;
+    border-radius: 69px;
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7) !important;
+    height: 46px;
+}
+.s-bt-3-t{
+    font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 2px;
+        line-height: 12px;
+        text-decoration: none;
+        font-weight: 700 !important;
+        align-items: center !important;
+        display: flex;
+        gap: 54px;
+}
+.s-n-1{
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 4;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.s-n-p-1{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-top: 7px;
+}
+.s-s-1{
+    display: flex;
+}
+.s-s-1-t{
+    min-width: 276px;
+}
+.s-s-p-1{
+    color: #4d4d4d;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 32px;
+    padding-right: 14px;
+    padding-bottom: 20px;
+    font-family: Poppins, sans-serif;
+}
+.s-s-p-1-b{
+    font-weight: bold;
+    color: black;
+}
+.s-s-a-1{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+}
+.s-s-1-s{
+    display: flex;
+    gap: 30px;
+}
+
+slider.css
+
+
+.card {
+    max-width: 376px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .card-img-top {
+    max-width: 376px;
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px);
+  }
+  
+  .card-body {
+    padding: 50px 20px 30px 20px;
+  }
+  .card-text {
+    color: #170426;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+    font-family: Roboto Slab, serif !important;
+    font-weight: 700 !important;
+  }
+  .rm-1{
+    bottom: 24px;
+    color: #170426 !important;
+    font-weight: 500;
+    left: 24px;
+    transition: all .5s ease;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+  }
+
+  CardCarousel.css
+
+
+  import './Slider.css'
+import CardCarousel from './CardCarousel'
+import CardCarouselData from './CardCarouselData'
+
+export default function Slider() {
+    var sld =0;
+    const handleRightArrowClick = () => {
+        const sS1S = document.querySelector('.s-s-1-s');
+        sld=sld-300;
+        sS1S.style.transform = `translateX(${sld}px)`;
+
+    };
+    const handleLeftArrowClick = () => {
+        const sS1S = document.querySelector('.s-s-1-s');
+        sld=sld+300;
+        sS1S.style.transform = `translateX(${sld}px)`;
+    };
+  return (
+    <div className='slider'>
+      <div className='s-w-1'>
+        <p className='s-p-1'>RESOURCES</p>
+        <h1 className='s-h-1'>Discover exclusive resources to supercharge growth</h1>
+      </div>
+      <div className='s-bn-1'>
+        <button className='s-bt-1' >
+          <div className='s-bt-1-t'>
+            READ
+            <span>
+              <svg width="18" height="14" fill="none" className="dir-arrow">
+                <path
+                  d="M17 7H1M11 13l6-6-6-6"
+                  stroke="#170426"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button className='s-bt-2' >
+          <div className='s-bt-2-t'>
+            LISTEN
+            <span>
+              <svg width="18" height="14" fill="none" className="dir-arrow">
+                <path
+                  d="M17 7H1M11 13l6-6-6-6"
+                  stroke="#170426"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button className='s-bt-3' >
+          <div className='s-bt-3-t'>
+            LISTEN
+            <span>
+              <svg width="18" height="14" fill="none" className="dir-arrow">
+                <path
+                  d="M17 7H1M11 13l6-6-6-6"
+                  stroke="#170426"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button className='s-n-1'>
+          <span onClick={handleLeftArrowClick}>
+            <svg width="39" height="39" fill="none" className="left-arrow">
+              <path
+                clipRule="evenodd"
+                d="M19.477 37.582v0c9.942 0 18-8.058 18-18v0c0-9.942-8.058-18-18-18v0c-9.942 0-18 8.058-18 18v0c0 9.942 8.058 18 18 18z"
+                stroke="#170426"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16.77 12.875a1 1 0 011.414 1.414l-4.293 4.293h13.586a1 1 0 010 2H13.89l4.293 4.293a1 1 0 01-1.415 1.414l-6-6a.995.995 0 01-.217-1.09.996.996 0 01.218-.325m6-6l-6 6 6-6z"
+                fill="#170426"
+              />
+            </svg>
+          </span>
+          <p className='s-n-p-1'> 1/3</p>
+          <span onClick={handleRightArrowClick}>
+            <svg width="39" height="39" fill="none" className="right-arrow" >
+              <path
+                clipRule="evenodd"
+                d="M19.863 37.582v0c-9.942 0-18-8.058-18-18v0c0-9.942 8.058-18 18-18v0c9.942 0 18 8.058 18 18v0c0 9.942-8.058 18-18 18z"
+                stroke="#170426"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M22.57 12.875a1 1 0 00-1.414 1.414l4.293 4.293H11.863a1 1 0 100 2H25.45l-4.293 4.293a1 1 0 101.414 1.414l6-6a.995.995 0 00.217-1.09.998.998 0 00-.21-.318l-.007-.007m-6-6l6 6-6-6z"
+                fill="#170426"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div className='s-s-1'>
+        <div className='s-s-1-t'>
+          <p className='s-s-p-1'>
+            <span className='s-s-p-1-b'>The Bugle</span>
+            - tips to help MSPs start, scale, and grow.
+          </p>
+          <a className='s-s-a-1'>view all </a>
+        </div>
+        <div className='s-s-1-s'>
+          {CardCarouselData.map((item, itemIndex) => (
+            <CardCarousel
+              key={itemIndex}
+              imageUrl={item.imageUrl}
+              content={item.content}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}

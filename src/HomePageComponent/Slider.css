@@ -1,0 +1,193 @@
+.slider{
+    padding: 100px 0px 100px 50px;
+    overflow: hidden;
+}
+.s-w-1{
+    width: 490px;
+}
+.s-p-1{
+    letter-spacing: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #f05 !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-family: Poppins, sans-serif;
+}
+.s-h-1{
+    font-size: 48px;
+    line-height: 56px;
+    font-family: Roboto Slab, serif !important;
+    font-weight: 700 !important;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+.s-bn-1{
+    display: flex;
+    gap: 20px;
+    padding-top:30px;
+    padding-bottom: 60px;
+}
+.s-bt-1{
+    background: linear-gradient(90deg, rgb(254, 125, 125) -60%, rgba(255, 255, 255, 0) 80%);
+    min-width: 176px;
+    padding: 16px 16px 16px 24px;
+    border: none;
+    border-radius: 69px;
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7) !important;
+    height: 46px;
+}
+.s-bt-1.active {
+    background: linear-gradient(90deg, rgb(254, 125, 125) 0%, rgb(255, 195, 195) 103.13%);
+    box-shadow: 0 4px 0 0 #170426;
+    transform: translateY(-6px);
+}
+.s-bt-1-t{
+    font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 2px;
+        line-height: 12px;
+        text-decoration: none;
+        font-weight: 700 !important;
+        align-items: center !important;
+        display: flex;
+        gap: 54px;
+}
+.s-bt-2{
+    background: linear-gradient(90deg, rgb(214, 127, 191) -60%, rgba(255, 255, 255, 0) 80%);
+    min-width: 176px;
+    padding: 16px 16px 16px 24px;
+    border: none;
+    border-radius: 69px;
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7) !important;
+    height: 46px;
+}
+.s-bt-2.active {
+    background: linear-gradient(90deg, rgb(214, 127, 191) 0%, rgb(255, 209, 243) 103.13%);    padding: 16px 16px 16px 24px;
+    box-shadow: 0 4px 0 0 #170426;
+    transform: translateY(-6px);
+}
+.s-bt-2-t{
+    font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 2px;
+        line-height: 12px;
+        text-decoration: none;
+        font-weight: 700 !important;
+        align-items: center !important;
+        display: flex;
+        gap: 54px;
+}
+.s-bt-3{
+    background: linear-gradient(90deg, rgb(142, 151, 225) -60%, rgba(255, 255, 255, 0) 80%);
+    min-width: 176px;
+    padding: 16px 16px 16px 24px;
+    border: none;
+    border-radius: 69px;
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7) !important;
+    height: 46px;
+}
+.s-bt-3.active {
+    background: linear-gradient(90deg, rgb(142, 151, 225) 0%, rgb(212, 217, 255) 103.13%);    border: none;
+    box-shadow: 0 4px 0 0 #170426;
+    transform: translateY(-6px);
+}
+.s-bt-3-t{
+    font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 2px;
+        line-height: 12px;
+        text-decoration: none;
+        font-weight: 700 !important;
+        align-items: center !important;
+        display: flex;
+        gap: 21px;
+}
+.s-n-1{
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 4;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.s-n-p-1{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-top: 7px;
+}
+.s-s-1{
+    display: flex;
+    position: relative; 
+    clip-path: inset(-100vw -100vw -100vw 0);
+}
+.s-s-1-t{
+    min-width: 276px;
+    z-index: 2; 
+    position: relative;
+    background-color: #f6f0e6; 
+}
+.s-s-p-1{
+    color: #4d4d4d;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 32px;
+    padding-right: 14px;
+    padding-bottom: 20px;
+    font-family: Poppins, sans-serif;
+}
+.s-s-p-1-b{
+    font-weight: bold;
+    color: black;
+}
+.s-s-a-1{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+}
+.s-s-1-s{
+    display: flex;
+    gap: 24px;
+    z-index: 1; 
+    position: relative; 
+    overflow: visible;
+    transition: transform 0.8s ease;
+}
+.left-arrow:hover{
+    background-color: #f05;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #170426, 0 6px 0 1px #170426 !important;
+    color: #170426 !important;
+    transform: translateY(-6px);
+}
+.l-a-p:hover{
+    stroke: #f05;
+}
+.l-a-p-a:hover{
+    fill: #fff;
+    stroke: #fff;
+}
+.right-arrow:hover{
+    background-color: #f05;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #170426, 0 6px 0 1px #170426 !important;
+    color: #170426 !important;
+    transform: translateY(-6px);
+
+}
+.r-a-p:hover{
+    stroke: #f05;
+    stroke:red
+}
+.r-a-p-a:hover{
+    fill: #fff;
+    stroke: #fff;
+}

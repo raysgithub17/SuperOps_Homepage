@@ -1,0 +1,222 @@
+.footer-box {
+    width: auto;
+    height: auto;
+    background-color: #f6f0e6;
+    padding: 0px 50px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 30px 0;
+  }
+  
+  .footer-logo {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .logo-stuff-div {
+    align-self: flex-start;
+  }
+  
+  .logo-div {
+    width: 25px;
+    height: 31px;
+  }
+  
+  .sops-logo {
+    width: 100%;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 16px 0 31px;
+    max-width: 280px;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: #8d8d8d;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+  }
+  
+  .link-heading {
+    font-weight: 800;
+    color: #333333;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 14px;
+    margin: 0;
+    text-decoration: none;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .link-item {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .link-item:hover {
+    color: red;
+  }
+  .link-heading:hover {
+    color: red;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 110px;
+  }
+  .f-b-p-1{
+    flex-grow: 1;
+  }
+  .med-logo-div{
+      width: 80px;
+  }
+  .med-logo{
+      width: 80px;
+  }
+  .f-b-p-2{
+      flex-grow: 1;
+      padding-left: 30px;
+  }
+  .sub{
+      font-weight: 700;
+      font-family: Inter,sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 14px;
+        margin-bottom: 16px;
+        text-decoration: none;
+
+  }
+  .sub:hover{
+      color: red;
+  }
+  .sub-input {
+    border: 1px solid #170426;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+  .sub-button{
+    margin-left: 10px;
+    height: 40px;
+    padding: 10px 25px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    background-color: #f05;
+    color: #fff !important;
+    transform: translateY(0);
+    z-index: 1;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #170426;
+  }
+  .f-b-p-2-l{
+ 
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 30px;
+  }
+  .f-b-p-3{
+      flex-grow: 1;
+      
+  }
+  .sm-logo-div{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;   
+  }
+  .sm-logo{
+      fill:#828181;
+      width: 24px;
+      height: 24px;
+  }
+  .sm-logo-2{
+    width: 23px;
+    height: 23px;
+}
+  .sm-logo:hover{
+    fill:red;
+}
+.sm-logo-1{
+    fill:#828181;
+}
+.sm-logo-1:hover{
+    fill:red;
+}
+.sm-logo-fb{
+    fill:#828181;
+}
+.sm-logo-fb-2{
+    width: 24px;
+    height: 24px;
+}
+ .follow{
+    font-weight: 700;
+    font-family: Inter,sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-variant: normal;
+      line-height: 14px;
+      margin-bottom: 16px;
+      text-decoration: none;
+
+}
+.follow:hover{
+    color: red;
+}
+.link-item-l {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding-top: 30px;
+  }
+  .link-item-l:hover{
+      color: red;
+  }

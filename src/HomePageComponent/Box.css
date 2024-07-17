@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.red-box{
+    background: linear-gradient(180deg,#f14857,#b80c45 97.08%);
+    border-radius: 20px;
+    
+    overflow: hidden;
+    padding-top: 64px;
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    width: 1176px;;
+    margin-left: 40px;
+   
+}
+.red-box > div{
+    flex: 1;
+}
+.typo-1{
+    color: white;
+    margin-left: 50px;
+    font-family: 'Roboto Slab', serif !important;
+    font-size: 48px;
+    line-height: 56px;
+    padding-bottom:24px;
+}
+.para-1{
+    color: white;
+    margin-left: 50px;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+.flex-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 25px;
+    gap: 20px;
+}
+.flex-right-item{
+    width: 48%;
+    animation: slideUp 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+
+.box-1-l{
+    padding: 20px;
+    color:white;
+    border-radius: 20px;
+}
+.box-1-l:hover{
+    background-color: white;
+    color: black;
+}
+.box-1-r{
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+}
+.box-1-r:hover{
+    background-color: white;
+    color: black;
+}
+.img-2{
+    width: 742px;
+    animation: slideUp 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    margin-left: 50px;
+    color: white;
+    justify-content: space-between; 
+    gap: 20px;
+}
+.pr{
+    padding: 25px;
+    color: white;
+    border-radius: 20px;
+    background: linear-gradient(
+270deg
+,rgba(168,30,43,.22) 30%,#8f0b17);
+}
+.pr:hover{
+    background: white;
+   color: black;
+}
+@keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .pr.selected {
+    background: white;
+    color: black;
+  }
+  .pr-info{
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 0 24px;
+    text-align: left;
+    color: #655a6d !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  .pr-ln{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+.pr-head{
+    font-size: 22px;
+    line-height: 22px;
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+.box-para{
+    font-size: 15px;
+    line-height: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    padding-top: 10px;
+    margin-left: 26px;
+}
+.box-para:hover{
+    color:#655a6d;
+}
+.box-para-head{
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  margin-left: 6px;
+  margin-top: -1; /* Adjust margin top as needed */
+  margin-bottom: 10px; /* Adjust margin bottom as needed */
+}
+@keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 100px; 
+      opacity: 1;
+    }
+  }
+  .pr.selected .pr-info {
+    animation: slideDown 0.8s forwards;
+  }
+  .box-para-head-div{
+    display: flex;
+    justify-items: center;
+  }
+  .img-div{
+    width: 20px;
+  }
+  .pr-icon{
+    width: 100%;
+    transition: filter 0.3s ease;
+
+  }
+  .box-1-l:hover .pr-icon {
+    filter: brightness(0.8) saturate(200%); 
+  }
+.arrow-right {
+  width: 12px; 
+  height: 12px; 
+  fill: #170426; 
+  position: absolute;
+  right: 10px;
+  top: 34px;
+  transform: translateY(-50%);
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+/* Styles for hover effect */
+.box-1-l:hover .arrow-right {
+  opacity: 1; /* Show on hover */
+}
+

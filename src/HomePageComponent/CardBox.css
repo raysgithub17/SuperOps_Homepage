@@ -1,0 +1,198 @@
+.full-card-box {
+    height: 294px;
+    padding: 45px 40px;
+    background-image: linear-gradient(rgba(255, 0, 85, 0) 0%, rgba(255, 0, 85, 0.05) 45.87%, rgba(255, 0, 85, 0) 91.75%);
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+  
+  .box-1 {
+    width: 466px;
+    padding: 0px 12px;
+  }
+  
+  .box-1-head-1 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  .box-1-para-1 {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+  }
+  
+  .box-1-button-1 {
+    padding: 10px 25px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #170426;
+    color: #170426 !important;
+    transform: translateY(0);
+    transition: all .3s cubic-bezier(.5, 2.5, .7, .7) !important;
+    z-index: 1;
+  }
+  
+  .box-1-button-2 {
+    margin-left: 10px;
+    height: 40px;
+    padding: 10px 25px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #170426;
+    background-color: #170426;
+    color: #fff !important;
+    transform: translateY(0);
+    z-index: 1;
+  }
+  
+  .tilting-card-wrapper {
+    width: 280px;
+ 
+    border-radius: 10px !important;
+    background-color:transparent;
+    position: relative;
+    aspect-ratio: 1 / 2;
+  }
+  
+  .box-2-head-1,
+  .box-3-head-1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700 !important;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .box-2-para-1,
+  .box-3-para-1 {
+    line-height: 32px;
+    margin: 20px 0 0;
+    max-width: 19ch;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
+    padding-top: 20px;
+  }
+  
+  .box-2-para-2,
+  .box-3-para-2 {
+    line-height: 32px;
+    margin: 20px 0 0;
+    max-width: 19ch;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding-top: 20px;
+  }
+  .tilting-card-body{
+      background-color: white;
+      width: 227px;
+      height: 227px;
+      padding: 40px 24px 27px 24px;
+      border-radius: 10px !important;
+  }
+  .tilting-card-body > :where(h1, p) {
+    background: white;
+  
+    margin: 0;
+  }
+  
+  .mouse-position-tracker {
+    position: absolute;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    z-index: 2;
+  }
+  
+  /* 1st, 4th, 7th */
+  .mouse-position-tracker:nth-child(3n - 2) {
+    left: 0;
+  }
+  
+  /* 2nd, 5th, 8th */
+  .mouse-position-tracker:nth-child(3n - 1) {
+    left: calc(100% / 3);
+  }
+  
+  /* 2nd, 5th, 8th */
+  .mouse-position-tracker:nth-child(3n) {
+    right: 0;
+  }
+  
+  /* 4 to 6 */
+  .mouse-position-tracker:nth-child(n + 4):nth-child(-n + 6) {
+    top: calc(100% / 3);
+  }
+  
+  /* 7 to 9 */
+  .mouse-position-tracker:nth-child(n + 7):nth-child(-n + 9) {
+    bottom: 0;
+  }
+  
+  .tilting-card-body {
+    --perspective: 700px;
+    --rotationX: 0;
+    --rotationY: 0;
+    --rotationZ: 0;
+    --angle: 15deg;
+    transform: perspective(var(--perspective)) rotateX(var(--rotationX))
+      rotateY(var(--rotationY)) rotateZ(var(--rotationZ));
+    transition: transform 500ms ease;
+  }
+  
+  .mouse-position-tracker:nth-child(1):hover ~ .tilting-card-body {
+    --rotationX: var(--angle);
+    --rotationY: calc(var(--angle) * -1);
+  }
+  
+  .mouse-position-tracker:nth-child(2):hover ~ .tilting-card-body {
+    --rotationX: var(--angle);
+  }
+  
+  .mouse-position-tracker:nth-child(3):hover ~ .tilting-card-body {
+    --rotationX: var(--angle);
+    --rotationY: var(--angle);
+  }
+  
+  .mouse-position-tracker:nth-child(4):hover ~ .tilting-card-body {
+    --rotationY: calc(var(--angle) * -1);
+  }
+  
+  .mouse-position-tracker:nth-child(6):hover ~ .tilting-card-body {
+    --rotationY: var(--angle);
+  }
+  
+  .mouse-position-tracker:nth-child(7):hover ~ .tilting-card-body {
+    --rotationY: calc(var(--angle) * -1);
+    --rotationX: calc(var(--angle) * -1);
+  }
+  
+  .mouse-position-tracker:nth-child(8):hover ~ .tilting-card-body {
+    --rotationX: calc(var(--angle) * -1);
+  }
+  
+  .mouse-position-tracker:nth-child(9):hover ~ .tilting-card-body {
+    --rotationY: var(--angle);
+    --rotationX: calc(var(--angle) * -1);
+  }
+  
+  :root {
+    --shadow: 0px 1px 2.2px rgba(0, 0, 0, 0.02),
+      0px 2.5px 5.3px rgba(0, 0, 0, 0.028), 0px 4.6px 10px rgba(0, 0, 0, 0.035),
+      0px 8.3px 17.9px rgba(0, 0, 0, 0.042), 0px 15.5px 33.4px rgba(0, 0, 0, 0.05),
+      0px 37px 80px rgba(0, 0, 0, 0.07);
+  }
+  
+  
