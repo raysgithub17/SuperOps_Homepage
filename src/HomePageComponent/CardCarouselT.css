@@ -1,4 +1,4 @@
-.card-t{
+ .card-t{
     max-width: 376px;
     border: 1px solid #ccc;
     border-radius: 1rem;
@@ -24,4 +24,6 @@
   }
   .card-t.active {
     transform: translateX(0);
-  }
+  } 
+
+  

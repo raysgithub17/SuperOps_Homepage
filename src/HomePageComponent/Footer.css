@@ -34,7 +34,7 @@
     height: 31px;
   }
   
-  .sops-logo {
+  .sops-logo-1{
     width: 100%;
   }
   
@@ -219,4 +219,32 @@
   }
   .link-item-l:hover{
       color: red;
+  }
+
+  @media (max-width: 480px) {
+    .sops-logo-1{
+      width: 40px;
+      
+    }
+    .footer-logo{
+      justify-content: start;
+    }
+    .footer-top{
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-links{
+      width: 50%;
+    }
+    .footer-bottom{
+      flex-direction: column;
+      gap: 50px;
+      
+    }
+    .f-b-p-1 {
+      margin: auto;
+    }
+    .sub-input{
+      width: 50%;
+    }
   }

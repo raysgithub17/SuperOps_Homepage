@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer-logo">
           <div className='logo-stuff-div'>
               <div className="logo-div">
-                <img src="sops.svg" alt="logo" className="sops-logo"/>
+                <img src="sops.svg" alt="logo" className="sops-logo-1"/>
               </div>
               <p className="logo-text">Powered by AI Superpowered for MSPs</p>
               <p className="copyright">© 2024 SuperOps. All rights reserved</p>
